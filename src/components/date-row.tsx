@@ -11,12 +11,11 @@ interface IDateRowProps {
 }
 
 const StyledXL = styled(XXL)({
-    fontSize: "41px",
     color: PALETTE.crimson["400"],
 });
 
 const StyledXXXL = styled(XXXL)({
-    fontSize: "51px",
+    fontSize: "41px",
     color: PALETTE.pink["400"],
 });
 
@@ -29,7 +28,9 @@ const StyledMD = styled(MD)<{ color: string }>((props) => ({
 
 const StyledContainer = styled.div({
     "&.container-0": {
-        opacity: 0.5,
+        opacity: 0.4,
+        textDecoration: "line-through",
+        textDecorationColor: PALETTE.crimson["400"],
     },
 
     "&.container-2": {

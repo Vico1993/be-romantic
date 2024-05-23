@@ -1,8 +1,12 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 import React, { useEffect, useState } from "react";
 import { IEvent, relevantDate } from "../service/date-service";
 import { Col, Grid, Row } from "@zendeskgarden/react-grid";
 import { PALETTE } from "@zendeskgarden/react-theming";
 import { XXXL } from "@zendeskgarden/react-typography";
+import { Anchor } from "@zendeskgarden/react-buttons";
+import GithubinIcon from "@zendeskgarden/svg-icons/src/16/github-fill.svg?react";
 import styled from "styled-components";
 
 import DateRow from "./../components/date-row";
@@ -40,6 +44,14 @@ const StyledTitleRow = styled(Row)({
     color: PALETTE.grey["800"],
 });
 
+const StyledHeader = styled(Row)({
+    position: "fixed",
+    top: 0,
+    width: "100%",
+    textAlign: "right",
+    padding: "15px",
+});
+
 export default function Index() {
     const [dates, setDates] = useState<IEvent[]>([]);
     const { innerHeight } = window;
@@ -50,6 +62,28 @@ export default function Index() {
 
     return (
         <StyledGrid minHeight={`${innerHeight - 16}px`}>
+            <StyledHeader justifyContent="end">
+                <Col lg={0.5} style={{ padding: "0px" }}>
+                    About
+                </Col>
+                <Col lg={0.6} style={{ padding: "0px" }}>
+                    <span
+                        style={{
+                            borderRadius: "20px",
+                            display: "block",
+                        }}
+                    >
+                        <GithubinIcon style={{ verticalAlign: "top" }} />
+                        <Anchor
+                            href={"https://github.com/Vico1993/be-romantic"}
+                            target="_blank"
+                            style={{ color: "black", marginLeft: "5px" }}
+                        >
+                            Github
+                        </Anchor>
+                    </span>
+                </Col>
+            </StyledHeader>
             <StyledTitleRow className="title" alignItems="center">
                 <Col textAlign="center">
                     <h1>
