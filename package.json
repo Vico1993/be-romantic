@@ -12,6 +12,7 @@
     "dependencies": {
         "@zendeskgarden/react-grid": "^8.76.2",
         "@zendeskgarden/react-theming": "^8.76.2",
+        "@zendeskgarden/react-typography": "^8.76.2",
         "localforage": "^1.10.0",
         "match-sorter": "^6.3.4",
         "react": "^18.2.0",
