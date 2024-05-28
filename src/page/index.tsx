@@ -1,6 +1,5 @@
-import ReactGA from "react-ga4";
 import styled from "styled-components";
-import React, { useEffect } from "react";
+import React from "react";
 import { Col, Grid } from "@zendeskgarden/react-grid";
 
 import Title from "./../components/title";
@@ -24,14 +23,6 @@ const Section = styled(Grid)<{ backgroundColor?: string; minHeight?: string }>(
 
 export default function Index() {
     const event = nextEvent();
-
-    useEffect(() => {
-        ReactGA.send({
-            hitType: "pageview",
-            page: "/",
-            title: "Index",
-        });
-    });
 
     return (
         <>
