@@ -1,5 +1,5 @@
-import ReactGA from "react-ga";
-import React, { useEffect } from "react";
+import ReactGA from "react-ga4";
+import React from "react";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -18,10 +18,6 @@ const router = createBrowserRouter([
 
 function Main() {
     ReactGA.initialize(TRACKING_ID);
-
-    useEffect(() => {
-        ReactGA.pageview(window.location.pathname + window.location.search);
-    }, []);
 
     return (
         <React.StrictMode>
