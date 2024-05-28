@@ -7,7 +7,7 @@ export interface IEvent {
 // For now it will be in a constant
 // Might need to move it into a proper service in the futur
 // TODO: Manage year in the list ( 2024 )
-const EVENTS: IEvent[] = [
+export const EVENTS: IEvent[] = [
     {
         date: "Fri Jan 26 2024 00:00:00 GMT+0000",
         name: "Republic Day - India",
@@ -73,12 +73,6 @@ const EVENTS: IEvent[] = [
         name: "Love Day in China",
         description:
             "Due to the pronunciation of the number 520 ('wǔ èr líng') which sounds like 'I love you' in Chinese ('wǒ ài nǐ'), this day has become popular for expressing love.",
-    },
-    {
-        date: "Fri Jun 21 2024 00:00:00 GMT+0000",
-        name: "Summer Solstice (Litha/Midsummer) - Northern Hemisphere",
-        description:
-            "In many cultures, this day is associated with fertility, love, and marriage. Celebrations often include bonfires, dancing, and other festivities.",
     },
     {
         date: "Wed Jun 12 2024 00:00:00 GMT+0000",
@@ -176,6 +170,38 @@ export function relevantDate(): IEvent[] {
     }
 
     return returnCertainKeys<IEvent>(EVENTS, listOfKeys);
+}
+
+// Return the most accurante event
+export function nextEvent(): IEvent {
+    const now = Date.now();
+
+    const index = EVENTS.findIndex(
+        (event) => new Date(event.date).valueOf() > now
+    );
+
+    if (index === -1) {
+        // Not found
+        return EVENTS[0];
+    }
+
+    return EVENTS[index];
+}
+
+/**
+ *  Format the date so we can have the same formated date everwhere
+ *
+ * @param date date format ( ex: Fri Jan 26 2024 00:00:00 GMT+0000 )
+ * @returns Monday, May 20, 2024
+ */
+export function formatDate(date: string): string {
+    return new Date(date).toLocaleDateString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        timeZone: "UTC",
+    });
 }
 
 function returnCertainKeys<T>(arr: Array<T>, listOfKeys: number[]): Array<T> {

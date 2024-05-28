@@ -1,30 +1,49 @@
+import { Anchor } from "@zendeskgarden/react-buttons";
 import { Col, Row } from "@zendeskgarden/react-grid";
 import React from "react";
 import styled from "styled-components";
 
-import coffee from "./../img/buy_me_coffee.png";
+import { COLORS, StyledRow } from "./style";
 
-const StyledRowFooter = styled(Row)({
-    position: "fixed",
-    bottom: 0,
-    width: "100%",
-    paddingBottom: "20px",
-});
+const StyledAnchor = styled(Anchor)({
+    color: COLORS.WHITE,
+    textDecoration: "none",
 
-const StyledCoffeeImg = styled.img({
-    height: "41px",
-    width: "174px",
-    boxShadow: "0px 3px 2px 0px rgba(190, 190, 190, 0.5)",
+    ":hover": {
+        color: COLORS.WHITE,
+    },
 });
 
 export default function Footer() {
+    // Retrieve current year for the footer
+    const currentYear = new Date().getFullYear();
+
     return (
-        <StyledRowFooter className="footer">
-            <Col textAlign="center">
-                <a href="https://buymeacoffee.com/vico1993" target="_blank">
-                    <StyledCoffeeImg src={coffee} alt="Buy Me A Coffee" />
-                </a>
+        <StyledRow>
+            <Col lg={1}>
+                <StyledAnchor
+                    href="https://buymeacoffee.com/vico1993"
+                    target="_blank"
+                >
+                    Github
+                </StyledAnchor>
             </Col>
-        </StyledRowFooter>
+            <Col lg={2}>
+                <StyledAnchor
+                    href="https://buymeacoffee.com/vico1993"
+                    target="_blank"
+                >
+                    Buy Me A Coffee
+                </StyledAnchor>
+            </Col>
+            <Col textAlign="end">
+                <StyledAnchor
+                    href="https://www.victorpiolin.com"
+                    target="_blank"
+                >
+                    © {currentYear} Victor Piolin
+                </StyledAnchor>
+            </Col>
+        </StyledRow>
     );
 }
