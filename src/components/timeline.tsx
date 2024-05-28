@@ -17,8 +17,8 @@ export default function History() {
         <StyledContainer>
             <StyledH3>Timeline</StyledH3>
             <Timeline isAlternate>
-                {EVENTS.map((event) => (
-                    <Timeline.Item>
+                {EVENTS.map((event, index) => (
+                    <Timeline.Item key={`event-item-${index}`}>
                         <Timeline.Content>
                             <StyledSpan
                                 hue={
