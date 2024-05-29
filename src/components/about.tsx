@@ -32,7 +32,7 @@ export default function About() {
                 <XXL>
                     This project started as a fun way to keep track of love days
                     for personal use, particularly to always have a reason to
-                    surprise my girlfriend with thoughtful gestures. It's an{" "}
+                    surprise loves one with thoughtful gestures. It's an{" "}
                     <Anchor
                         href="https://github.com/Vico1993/be-romantic"
                         target="_blank"
