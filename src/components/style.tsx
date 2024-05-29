@@ -2,12 +2,19 @@ import styled from "styled-components";
 import { Row } from "@zendeskgarden/react-grid";
 
 /**
+ * FONT
+ */
+export const FONT_FAMILLY_HAND_WRITING = "Apple Chancery, cursive";
+
+/**
  * COLORS
  */
 export const COLORS = {
     WHITE: "#FFFBDB",
     BLACK: "#232C33",
-    RED: "#FE654F",
+    RED_OLD: "#FE654F",
+    RED: "#f56262",
+    YELLOW: "#ffd480",
 };
 
 /**
@@ -19,6 +26,12 @@ export const StyledContainer = styled.div({
 
 export const StyledH3 = styled.h3({
     fontSize: "50px",
+    color: COLORS.RED,
+    fontFamily: FONT_FAMILLY_HAND_WRITING,
+});
+
+export const StyledBold = styled.b({
+    color: COLORS.RED,
 });
 
 export const StyledRow = styled(Row)({
