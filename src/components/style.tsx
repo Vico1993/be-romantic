@@ -25,4 +25,8 @@ export const StyledRow = styled(Row)({
     width: "1080px",
     marginLeft: "auto",
     marginRight: "auto",
+
+    "@media (max-width: 1024px)": {
+        width: "100%",
+    },
 });

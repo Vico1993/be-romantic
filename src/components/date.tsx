@@ -25,6 +25,10 @@ const StyledDescription = styled.p({
     fontSize: "25px",
     width: "500px",
     marginLeft: "auto",
+
+    "@media (max-width: 1024px)": {
+        width: "100%",
+    },
 });
 
 export default function Date({ event }: IDateProps) {

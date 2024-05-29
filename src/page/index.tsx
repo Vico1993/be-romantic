@@ -15,7 +15,7 @@ const Section = styled(Grid)<{ backgroundColor?: string; minHeight?: string }>(
         display: "flex",
         flexDirection: "column",
         minHeight,
-        backgroundColor: backgroundColor,
+        backgroundColor,
         fontFamily: "sans-serif",
         justifyContent: "center",
     })
@@ -28,7 +28,7 @@ export default function Index() {
         <>
             <Section backgroundColor={COLORS.BLACK} minHeight="900px">
                 <StyledRow className="title">
-                    <Col>
+                    <Col lg="auto">
                         <Title />
                     </Col>
                 </StyledRow>
