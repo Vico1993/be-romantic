@@ -10,7 +10,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@zendeskgarden/react-accordions": "^8.76.5",
+        "@zendeskgarden/react-accordions": "^8.76.7",
         "@zendeskgarden/react-buttons": "^8.76.2",
         "@zendeskgarden/react-grid": "^8.76.6",
         "@zendeskgarden/react-theming": "^8.76.7",
