@@ -33,7 +33,7 @@
         "eslint": "^9.17.0",
         "eslint-plugin-react": "^7.37.2",
         "eslint-plugin-react-hooks": "^5.2.0",
-        "eslint-plugin-react-refresh": "^0.4.19",
+        "eslint-plugin-react-refresh": "^0.4.20",
         "vite": "^6.2.5",
         "vite-plugin-favicon": "^1.0.8"
     }
