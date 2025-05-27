@@ -22,7 +22,7 @@
         "react-dom": "^18.3.1",
         "react-router-dom": "^7.4.1",
         "sort-by": "^1.2.0",
-        "styled-components": "^6.1.15",
+        "styled-components": "^6.1.18",
         "vite-plugin-svgr": "^4.3.0"
     },
     "devDependencies": {
