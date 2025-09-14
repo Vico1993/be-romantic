@@ -15,7 +15,7 @@
         "@zendeskgarden/react-grid": "^9.9.0",
         "@zendeskgarden/react-theming": "^9.8.0",
         "@zendeskgarden/react-typography": "^9.8.0",
-        "@zendeskgarden/svg-icons": "^7.5.0",
+        "@zendeskgarden/svg-icons": "^8.0.0",
         "localforage": "^1.10.0",
         "match-sorter": "^8.0.3",
         "react": "^18.3.1",
