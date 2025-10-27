@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "@zendeskgarden/react-accordions": "^9.11.2",
-        "@zendeskgarden/react-buttons": "^9.11.0",
+        "@zendeskgarden/react-buttons": "^9.12.0",
         "@zendeskgarden/react-grid": "^9.9.0",
         "@zendeskgarden/react-theming": "^9.8.0",
         "@zendeskgarden/react-typography": "^9.8.0",
